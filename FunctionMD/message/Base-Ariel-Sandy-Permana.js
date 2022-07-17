@@ -1854,9 +1854,9 @@ case 'tagall':
 if (!isGroup) return reply('*Perintah ini khusus Grup*')
 if (!isGroupAdmins) return reply('*Khusus Admin*!')
 var mems = []
-var teks = `「 Tag All 」\n➲ Pesan : ${q}\n\n`
+var teks = `「 Tag All 」\n\n➲ Pesan : ${q}\n\n`
 for (let i of groupMembers) {
-teks += `⚔️ @${i.id.split("@")[0]}\nMuncul Lah Para Mahluk Di Group Ini`
+teks += `⚔️ @${i.id.split("@")[0]}\n`
 mems.push(i.id)
 }
 sock.sendMessage(from, { text: teks, mentions: mems}, { quoted: m })
